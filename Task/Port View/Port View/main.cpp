@@ -29,6 +29,149 @@ void display() {
 	glVertex2f(1.0f, -0.6f);
 	glEnd();
 
+	glBegin(GL_QUADS);
+	glColor3ub(51, 102, 255);
+	glVertex2f(-1.0f, -0.6f);
+	glVertex2f(1.0f, -0.6f);
+
+	glVertex2f(1.0f, 0.2f);
+	glVertex2f(-1.0f, 0.2f);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3ub(204, 153, 0);
+	glVertex2f(-1.0f, 0.2f);
+	glVertex2f(1.0f, 0.2f);
+
+	glVertex2f(1.0f, 0.25f);
+	glVertex2f(-1.0f, 0.25f);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3ub(0, 0, 0);
+	glVertex2f(0.0f, -0.3f);
+	glVertex2f(0.7f, -0.3f);
+
+	glVertex2f(0.8f, -0.2f);
+	glVertex2f(-0.1f, -0.2f);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3ub(230, 230, 230);
+	glVertex2f(0.4f, -0.1f);
+	glVertex2f(0.4f, -0.2f);
+
+	glVertex2f(0.7f, -0.2f);
+	glVertex2f(0.7f, -0.1f);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3ub(120, 120, 51);
+	glVertex2f(0.0f, -0.2f);
+	glVertex2f(0.3f, -0.2f);
+
+	glVertex2f(0.3f, -0.1f);
+	glVertex2f(0.0f, -0.1f);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3ub(102, 102, 102);
+	glVertex2f(-0.8f, -0.8f);
+	glVertex2f(-0.8f, -0.9f);
+
+	glVertex2f(-0.5f, -0.9f);
+	glVertex2f(-0.5f, -0.8f);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3ub(128, 128, 128);
+
+	glVertex2f(-0.4f, -0.4f);
+	glVertex2f(-0.5f, -0.4f);
+	glVertex2f(-0.7f, -0.5f);
+	glVertex2f(-0.7f, -0.8f);
+	glVertex2f(-0.6f, -0.8f);
+	glVertex2f(-0.6f, -0.5f);
+	glVertex2f(-0.4f, -0.4f);
+	glEnd();
+
+	glBegin(GL_LINES);
+	glColor3f(0.0f, 0.0f, 0.0f);
+	glVertex2f(-0.4f, -0.4f);
+	glVertex2f(-0.4f, -0.7f);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3ub(102, 51, 0);
+	glVertex2f(-0.3f, -0.7f);
+	glVertex2f(-0.5f, -0.7f);
+
+	glVertex2f(-0.5f, -0.8f);
+	glVertex2f(-0.3f, -0.8f);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3ub(255, 128, 0);
+	glVertex2f(-0.2f, -0.7f);
+	glVertex2f(-0.2f, -0.9f);
+
+	glVertex2f(0.1f, -0.9f);
+	glVertex2f(0.1f, -0.7f);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3ub(128, 26, 0);
+	glVertex2f(0.1f, -0.7f);
+	glVertex2f(0.1f, -0.9f);
+
+	glVertex2f(0.3f, -0.9f);
+	glVertex2f(0.3f, -0.7f);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3ub(230, 230, 230);
+	glVertex2f(-0.9f, 0.25f);
+	glVertex2f(-0.7f, 0.25f);
+
+	glVertex2f(-0.7f, 0.6f);
+	glVertex2f(-0.9f, 0.6f);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3ub(230, 230, 230);
+	glVertex2f(-0.7f, 0.25f);
+	glVertex2f(-0.4f, 0.25f);
+
+	glVertex2f(-0.4f, 0.7f);
+	glVertex2f(-0.7f, 0.7f);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3ub(230, 230, 230);
+	glVertex2f(-0.9f, 0.25f);
+	glVertex2f(-0.7f, 0.25f);
+
+	glVertex2f(-0.7f, 0.6f);
+	glVertex2f(-0.9f, 0.6f);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3ub(230, 230, 230);
+	glVertex2f(-0.4f, 0.25f);
+	glVertex2f(-0.1f, 0.25f);
+
+	glVertex2f(-0.1f, 0.6f);
+	glVertex2f(-0.4f, 0.6f);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glColor3ub(140, 140, 140);
+	glVertex2f(0.1f, 0.25f);
+	glVertex2f(0.9f, 0.25f);
+
+	glVertex2f(0.9f, 0.5f);
+	glVertex2f(0.1f, 0.5f);
+	glEnd();
 
 	GLfloat x1=0.6f; GLfloat y1=0.75f; GLfloat radius1 =.1f;
 	int triangleAmount = 20;
@@ -45,12 +188,6 @@ void display() {
 			);
 		}
 	glEnd();
-
-	/*glBegin(GL_QUADS);
-	glColor3ub(0, 0, 255);
-	glVertex2f(0.0f, 0.0f);
-	glEnd();*/
-
 
 	glFlush();
 }
