@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1613330524 source:d:\computer graphics\task\port view\port view\main.cpp
+1613384147 source:d:\computer graphics\task\port view\port view\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	<windows.h>
