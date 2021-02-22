@@ -5,6 +5,13 @@
 #include<math.h>>
 # define PI   3.14159265358979323846
 
+GLfloat i = 0.0f;
+
+void Idle()
+{
+    glutPostRedisplay();//// marks the current window as needing to be redisplayed
+}
+
 void display() {
 	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -91,7 +98,8 @@ void display() {
 	glVertex2f(-0.7f, -0.5f);
 	glVertex2f(-0.7f, -0.8f);
 	glVertex2f(-0.6f, -0.8f);
-	glVertex2f(-0.7f, -0.5f);
+	glVertex2f(-0.6f, -0.5f);
+	glVertex2f(-0.4f, -0.4f);
 	glEnd();
 
 
@@ -229,7 +237,7 @@ void display() {
 	glEnd();
 
 
-	glTranslatef(+1.4f,-0.07f,0.0f);
+	/*glTranslatef(+1.4f,-0.07f,0.0f);
 	//glScalef(0.2,0.2,0);
 	glBegin(GL_QUADS);
 	glColor3ub(255, 128, 0);
@@ -247,16 +255,72 @@ void display() {
 
 	glVertex2f(0.3f, -0.9f);
 	glVertex2f(0.3f, -0.7f);
+	glEnd();*/
+
+	glLoadIdentity();
+
+	glBegin(GL_POLYGON);
+	glColor3ub(128, 128, 128);
+	glVertex2f(0.7f, -0.5f);
+	glVertex2f(0.65f, -0.6f);
+	glVertex2f(0.65f, -0.9f);
+	glVertex2f(0.75f, -0.9f);
+	glVertex2f(0.75f, -0.6f);
 	glEnd();
+
+	glBegin(GL_POLYGON);
+	glColor3ub(102, 102, 102);
+	glVertex2f(0.6f, -0.9f);
+	glVertex2f(0.6f, -1.0f);
+	glVertex2f(0.8f, -1.0f);
+	glVertex2f(0.8f, -0.9f);
+	glEnd();
+
+	glPushMatrix(); //glPushMatrix copies the top matrix and pushes it onto the stack, while glPopMatrix pops the top matrix off the stack
+    glTranslatef(0.7,-0.5,0);
+    glRotatef(i,0.0,0.0,1.0);
+
+    glBegin(GL_TRIANGLES);
+    glColor3f(1.0f, 0.0f, 0.0f);
+    glVertex2f(0.0f, 0.0f);
+    glVertex2f( 0.2f, 0.0f);
+    glVertex2f( 0.2f, -0.1f);
+    glEnd();
+
+    glBegin(GL_TRIANGLES);
+    glColor3f(0.0f, 1.0f, 0.0f);
+    glVertex2f(0.0f, 0.0f);
+    glVertex2f( 0.0f, 0.2f);
+    glVertex2f( 0.1f, 0.2f);
+
+    glBegin(GL_TRIANGLES);
+    glColor3f(1.0f, 1.0f, 0.0f);
+    glVertex2f(0.0f, 0.0f);
+    glVertex2f( -0.2f, 0.0f);
+    glVertex2f( -0.2f, 0.1f);
+
+    glBegin(GL_TRIANGLES);
+    glColor3f(0.0f, 0.0f, 1.0f);
+    glVertex2f(0.0f, 0.0f);
+    glVertex2f(0.0f, -0.2f);
+    glVertex2f(-0.1f, -0.2f);
+    glEnd();
+    i+=0.01f;
+
+    glPopMatrix();//while glPopMatrix pops the top matrix off the stack
+
+
+
 
 	glFlush();
 }
 
 int main(int argc, char** argv) {
 	glutInit(&argc, argv);
-	glutCreateWindow("OpenGL Setup");
-	glutInitWindowSize(500, 500);
+	glutCreateWindow("Port View");
+	glutInitWindowSize(320, 320);
 	glutDisplayFunc(display);
+	glutIdleFunc(Idle);
 	glutMainLoop();
 	return 0;
 }

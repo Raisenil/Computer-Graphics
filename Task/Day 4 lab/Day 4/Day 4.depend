@@ -1,10 +1,7 @@
 # depslib dependency file v1.0
-1613990229 source:d:\computer graphics\task\port view\port view\main.cpp
+1613981269 source:d:\computer graphics\task\day 4 lab\day 4\main.cpp
 	<windows.h>
 	<GL/glut.h>
-	<windows.h>
-	<GL/glut.h>
-	<math.h>
 
 1595499199 c:\mingw\include\windows.h
 	<winresrc.h>
@@ -354,7 +351,4 @@
 1595499199 c:\mingw\include\gl\glu.h
 	<stddef.h>
 	<GL/gl.h>
-
-1595499184 c:\mingw\include\math.h
-	<_mingw.h>
 
